@@ -4,18 +4,12 @@
 
 <br/>
 
-[ProtTrans](https://github.com/agemagician/ProtTrans/) is providing **state of the art pre-trained models for proteins**. ProtTrans was trained on **thousands of GPUs from Summit** and **hundreds of Google TPUs** using various **Transformer models**.
-
-Have a look at our paper [ProtTrans: cracking the language of life’s code through self-supervised deep learning and high performance computing](https://doi.org/10.1109/TPAMI.2021.3095381) for more information about our work. 
-
-<br/>
-<p align="center">
-    <img width="70%" src="https://github.com/agemagician/ProtTrans/raw/master/images/transformers_attention.png" alt="ProtTrans Attention Visualization">
-</p>
-<br/>
+[MTDP](https://github.com/KennthShang/MTDP) is providing **state-of-the-art pre-trained models for proteins**. 
 
 
-This repository will be updated regulary with **new pre-trained models for proteins** as part of supporting **bioinformatics** community in general, and **Covid-19 research** specifically through our [Accelerate SARS-CoV-2 research with transfer learning using pre-trained language modeling models](https://covid19-hpc-consortium.org/projects/5ed56e51a21132007ebf57bf) project.
+
+
+This repository will be updated regularly with **new pre-trained models for proteins** as part of supporting the **bioinformatics** community in general.
 
 Table of Contents
 =================
@@ -47,8 +41,7 @@ Table of Contents
 
 <a name="news"></a>
 ## ⌛️&nbsp; News
-* **2023/07/14: [FineTuning with LoRA]( https://github.com/agemagician/ProtTrans/tree/master/Fine-Tuning) provides a notebooks on how to fine-tune ProtT5 on both, per-residue and per-protein tasks, using Low-Rank Adaptation (LoRA) for efficient finetuning (thanks @0syrys !).**
-* 2022/11/18: Availability: [LambdaPP](https://embed.predictprotein.org/) offers a simple web-service to access ProtT5-based predictions and UniProt now offers to download [pre-computed ProtT5 embeddings](https://www.uniprot.org/help/embeddings) for a subset of selected organisms. 
+
 
 <a name="install"></a>
 ## 🚀&nbsp; Installation
