@@ -1,5 +1,5 @@
 <br/>
-<h1 align="center">ProtTrans</h1>
+<h1 align="center">MTDP</h1>
 <br/>
 
 <br/>
