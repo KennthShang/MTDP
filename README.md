@@ -308,73 +308,7 @@ Feel free to **file a new issue** with a respective title and description on the
 
 For protein feature extraction or fine-tuninng our pre-trained models, [Pytorch](https://github.com/pytorch/pytorch) and [Transformers](https://github.com/huggingface/transformers) library from huggingface is needed. For model visualization, you need to install [BertViz](https://github.com/jessevig/bertviz) library.
 
-<a name="team"></a>
-## 🤵&nbsp; Team
 
- * <b>Technical University of Munich:</b><br/>
- 
-| Ahmed Elnaggar       |      Michael Heinzinger  |  Christian Dallago | Ghalia Rehawi | Burkhard Rost |
-|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|
-| <img width=120/ src="https://github.com/agemagician/ProtTrans/blob/master/images/ElnaggarAhmend.jpg?raw=true"> | <img width=120/ src="https://github.com/agemagician/ProtTrans/blob/master/images/MichaelHeinzinger-2.jpg?raw=true"> | <img width=120/ src="https://github.com/agemagician/ProtTrans/blob/master/images/christiandallago.png?raw=true"> | <img width=120/ src="https://github.com/agemagician/ProtTrans/blob/master/images/female.png?raw=true"> | <img width=120/ src="https://github.com/agemagician/ProtTrans/blob/master/images/B.Rost.jpg?raw=true"> |
-
- * <b>Med AI Technology:</b><br/>
-
-| Yu Wang       |
-|:-------------------------:|
-| <img width=120/ src="https://github.com/agemagician/ProtTrans/blob/master/images/yu-wang.jpeg?raw=true"> |
-
-* <b>Google:</b><br/>
-
-| Llion Jones       |
-|:-------------------------:|
-| <img width=120/ src="https://github.com/agemagician/ProtTrans/blob/master/images/Llion-Jones.jpg?raw=true"> |
-
-* <b>Nvidia:</b><br/>
-
-| Tom Gibbs       | Tamas Feher | Christoph Angerer |
-|:-------------------------:|:-------------------------:|:-------------------------:|
-| <img width=120/ src="https://github.com/agemagician/ProtTrans/blob/master/images/Tom-Gibbs.png?raw=true"> | <img width=120/ src="https://github.com/agemagician/ProtTrans/blob/master/images/Tamas-Feher.jpeg?raw=true"> | <img width=120/ src="https://github.com/agemagician/ProtTrans/blob/master/images/Christoph-Angerer.jpg?raw=true"> |
-
-* <b>Seoul National University:</b><br/>
-
-| Martin Steinegger       |
-|:-------------------------:|
-| <img width=120/ src="https://github.com/agemagician/ProtTrans/raw/master/images/Martin-Steinegger.png"> |
-
-
-* <b>ORNL:</b><br/>
-
-| Debsindhu Bhowmik       |
-|:-------------------------:|
-| <img width=120/ src="https://github.com/agemagician/ProtTrans/blob/master/images/Debsindhu-Bhowmik.jpg?raw=true"> |
-
-<a name="sponsors"></a>
-## 💰&nbsp; Sponsors
-
-<!--
-<div id="banner" style="overflow: hidden;justify-content:space-around;display:table-cell; vertical-align:middle; text-align:center">
-  <div class="" style="max-width: 20%;max-height: 20%;display: inline-block;">
-      <img width="14%" src="https://github.com/agemagician/ProtTrans/blob/master/images/1200px-Nvidia_image_logo.svg.png?raw=true" alt="nvidia logo">
-  </div>
-
-  <div class="" style="max-width: 20%;max-height: 20%;display: inline-block;">
-      <img width="22%" src="https://github.com/agemagician/ProtTrans/blob/master/images/Google-Logo.jpg?raw=true" alt="google cloud logo">
-  </div>
-
-  <div class="" style="max-width: 20%;max-height: 20%;display: inline-block;">
-      <img width="20%" src="https://github.com/agemagician/ProtTrans/blob/master/images/Oak_Ridge_National_Laboratory_logo.svg.png?raw=true" alt="ornl logo">
-  </div>
-  
-  <div class="" style="max-width: 20%;max-height: 20%;display: inline-block;">
-      <img width="12%" src="https://github.com/agemagician/ProtTrans/blob/master/images/SOFTWARE_CAMPUS_logo_cmyk.jpg?raw=true" alt="software campus logo">
-  </div>
-  
-</div>
--->
-
-Nvidia       |      Google  |      Google  | ORNL | Software Campus
-:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-![](https://github.com/agemagician/ProtTrans/blob/master/images/1200px-Nvidia_image_logo.svg.png?raw=true) | ![](https://github.com/agemagician/ProtTrans/blob/master/images/google-cloud-logo.jpg?raw=true) | ![](https://github.com/agemagician/ProtTrans/blob/master/images/tfrc.png?raw=true) | ![](https://github.com/agemagician/ProtTrans/blob/master/images/Oak_Ridge_National_Laboratory_logo.svg.png?raw=true) | ![](https://github.com/agemagician/ProtTrans/blob/master/images/SOFTWARE_CAMPUS_logo_cmyk.jpg?raw=true)
 
 <a name="license"></a>
 ## 📘&nbsp; License
