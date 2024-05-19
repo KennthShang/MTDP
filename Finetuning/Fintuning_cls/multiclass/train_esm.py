@@ -15,17 +15,11 @@ from sklearn.model_selection import KFold
 import argparse
 import os
 
-parser = argparse.ArgumentParser(description="""Main script of PhaSUIT.""")
-parser.add_argument('--id', help='layer',  type=int, default = 6)
-inputs = parser.parse_args()
-
-
-import argparse
 
 parser = argparse.ArgumentParser(description="""Main script of EMS classifier.""")
-parser.add_argument('--feat', type=int, default=1, help='path to the ems embedding.')
-parser.add_argument('--label', type=int, default=6, help='path to the label.')
-parser.add_argument('--outpth', type=int, default=6, help='path to the output folder.')
+parser.add_argument('--feat', type=str, help='path to the ems embedding.')
+parser.add_argument('--label', type=str, help='path to the label.')
+parser.add_argument('--outpth', type=str, help='path to the output folder.')
 inputs = parser.parse_args()
 
 

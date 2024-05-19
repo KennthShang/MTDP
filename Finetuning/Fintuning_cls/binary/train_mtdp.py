@@ -15,9 +15,9 @@ import argparse
 import os
 
 parser = argparse.ArgumentParser(description="""Main script of MTDP classifier.""")
-parser.add_argument('--feat', type=int, default=1, help='path to the MTDP embedding.')
-parser.add_argument('--label', type=int, default=6, help='path to the label.')
-parser.add_argument('--outpth', type=int, default=6, help='path to the output folder.')
+parser.add_argument('--feat', type=int, help='path to the MTDP embedding.')
+parser.add_argument('--label', type=int, help='path to the label.')
+parser.add_argument('--outpth', type=int, help='path to the output folder.')
 inputs = parser.parse_args()
 
 if not os.path.isdir(inputs.outpth):
@@ -25,7 +25,6 @@ if not os.path.isdir(inputs.outpth):
 
 embed = pkl.load(open(f'{inputs.feat}', 'rb'))
 label = pkl.load(open(f'{inputs.label}', 'rb'))
-
 
 embed_size = embed.shape[1]
 batch_size = 64
@@ -66,7 +65,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 def clean_model():
     model = Classifier(
         embed_size=embed_size,
-        out = 10
+        out = 2
     ).to(device)
     print(model)
     loss_func = nn.CrossEntropyLoss()

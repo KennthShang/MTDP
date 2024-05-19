@@ -16,11 +16,11 @@ from ulity import create_dataset
 import argparse
 
 parser = argparse.ArgumentParser(description="""Main script of MTDP embedder.""")
-parser.add_argument('--teacher1', type=int, default=1, help='input pth to the teacher1 embedding.')
-parser.add_argument('--teacher2', type=int, default=1, help='input pth to the teacher2 embedding.')
-parser.add_argument('--inputFA', type=int, default=1, help='input path to the protein sequences.')
-parser.add_argument('--db', type=int, default=6, help='path to the database.')
-parser.add_argument('--outpth', type=int, default=6, help='path to the output folder.')
+parser.add_argument('--teacher1', type=str, help='input pth to the teacher1 embedding.')
+parser.add_argument('--teacher2', type=str, help='input pth to the teacher2 embedding.')
+parser.add_argument('--inputFA', type=str,  help='input path to the protein sequences.')
+parser.add_argument('--db', type=str, help='path to the database.')
+parser.add_argument('--outpth', type=str,  help='path to the output folder.')
 inputs = parser.parse_args()
 
 
