@@ -1,7 +1,7 @@
-![figure](https://github.com/KennthShang/MTDP/assets/22445402/a4a13d22-15dc-4b0d-804a-75b8580038ec)<br/>
+
 <h1 align="center">MTDP</h1>
 <br/>
-
+<img src='figure1.png'>
 <br/>
 
 [MTDP](https://github.com/KennthShang/MTDP): a Multi-Teacher Distillation approach for Protein embedding aims to enhance efficiency while preserving high-resolution representations. By leveraging the knowledge of multiple pre-trained protein embedding models, MTDP learns a compact and informative representation of proteins.
@@ -137,7 +137,7 @@ How to use MTDP:
 
 <a name="results"></a>
 ## &nbsp; Original downstream Predictions 
-<img src='figure.jpg'>
+<img src='figure2.png'>
 
 
 <a name="community"></a>
