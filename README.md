@@ -128,12 +128,12 @@ How to use MTDP:
 <a name="fine-tuning"></a>
  * <b>&nbsp; Fine Tuning (FT):</b><br/>
  Please check:
- [Fine Tuning Section](https://github.com/KennthShang/MTDP/tree/main/Finetuning)
+ [Fine Tuning](https://github.com/KennthShang/MTDP/tree/main/Finetuning) folder
 
 <a name="Distillation"></a>
  * <b>&nbsp; Distillation:</b><br/>
  Please check:
- [Distillation Section](https://github.com/KennthShang/MTDP/tree/main/Distillation)
+ [Distillation](https://github.com/KennthShang/MTDP/tree/main/Distillation) folder
 
 <a name="results"></a>
 ## &nbsp; Original downstream Predictions 
