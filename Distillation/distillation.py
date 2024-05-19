@@ -23,8 +23,6 @@ parser.add_argument('--db', type=int, default=6, help='path to the database.')
 parser.add_argument('--outpth', type=int, default=6, help='path to the output folder.')
 inputs = parser.parse_args()
 
-tokenizer = T5Tokenizer('/home/jyshang2/distillation/base/T5/Tokenizer/spiece.model', model_max_length=1001, truncation=True, do_lower_case=False)
-
 
 teacher1 = pkl.load(open(f'{inputs.teacher1}.pkl', 'rb'))
 teacher2 = pkl.load(open(f'{inputs.teacher2}.pkl', 'rb'))

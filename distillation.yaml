@@ -1,4 +1,4 @@
-name: distillation
+name: MTDP
 channels:
   - pytorch
   - nvidia

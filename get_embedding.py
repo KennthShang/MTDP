@@ -52,7 +52,7 @@ train_data = Dataset.from_dict(ids)
 model = MTDP()
 try:
     model.load_state_dict(
-        torch.load('models/checkpoint-uniprotKB/uniprotKB.bin', map_location='cpu'))
+        torch.load(f'{MTDP_path}/UniProtKB/uniprotKB.bin', map_location='cpu'))
 except:
     print('No model found, initialize a new model')
     exit()
@@ -81,5 +81,5 @@ with torch.no_grad():
 
 embed = np.concatenate(embed)
 embed_dict = dict(zip(acc, embed))    
-pkl.dump(embed_dict, open(f'{outpth}/T5_embed.dict', 'wb'))
+pkl.dump(embed_dict, open(f'{outpth}/MTDP_embed.dict', 'wb'))
 
