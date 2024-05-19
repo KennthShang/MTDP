@@ -13,7 +13,7 @@ from sklearn.metrics import confusion_matrix
 from cls import Classifier
 from ulity import return_batch, return_ids
 import argparse
-
+import os
 
 parser = argparse.ArgumentParser(description="""Main script of MTDP embedder.""")
 parser.add_argument('--train_FA', type=int, default=1, help='input path to the training protein sequences.')
@@ -23,6 +23,11 @@ parser.add_argument('--test_label', type=int, default=1, help='input path to the
 parser.add_argument('--db', type=int, default=6, help='path to the database.')
 parser.add_argument('--outpth', type=int, default=6, help='path to the output folder.')
 inputs = parser.parse_args()
+
+
+if not os.path.isdir(inputs.outpth):
+    os.makedirs(inputs.outpth)
+
 
 train_FA = inputs.train_FA
 train_label = inputs.train_label

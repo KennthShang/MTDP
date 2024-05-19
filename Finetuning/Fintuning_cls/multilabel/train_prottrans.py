@@ -12,6 +12,7 @@ from sklearn.metrics import average_precision_score
 import torch.utils.data as Data
 from sklearn.model_selection import KFold
 import argparse
+import os
 
 parser = argparse.ArgumentParser(description="""Main script of prottrans classifier.""")
 parser.add_argument('--feat', type=int, default=1, help='path to the prottrans embedding.')
@@ -19,7 +20,8 @@ parser.add_argument('--label', type=int, default=6, help='path to the label.')
 parser.add_argument('--outpth', type=int, default=6, help='path to the output folder.')
 inputs = parser.parse_args()
  
-
+if not os.path.isdir(inputs.outpth):
+    os.makedirs(inputs.outpth)
 
 embed = pkl.load(open(f'{inputs.feat}', 'rb'))
 label = pkl.load(open(f'{inputs.label}', 'rb'))

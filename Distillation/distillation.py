@@ -24,6 +24,11 @@ parser.add_argument('--outpth', type=int, default=6, help='path to the output fo
 inputs = parser.parse_args()
 
 
+
+if not os.path.isdir(inputs.outpth):
+    os.makedirs(inputs.outpth)
+
+
 teacher1 = pkl.load(open(f'{inputs.teacher1}.pkl', 'rb'))
 teacher2 = pkl.load(open(f'{inputs.teacher2}.pkl', 'rb'))
 train_set = create_dataset(inputs.db, inputs.inputFA, inputs.outpth, list(teacher1), list(teacher2))

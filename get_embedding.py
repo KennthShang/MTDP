@@ -11,6 +11,7 @@ from transformers import T5Tokenizer
 from Bio import SeqIO
 from ulity import *
 import argparse
+import os
 
 
 
@@ -19,6 +20,10 @@ parser.add_argument('--inputs', type=int, default=1, help='input path to the pro
 parser.add_argument('--db', type=int, default=6, help='path to the database.')
 parser.add_argument('--outpth', type=int, default=6, help='path to the output folder.')
 inputs = parser.parse_args()
+
+
+if not os.path.isdir(inputs.outpth):
+    os.makedirs(inputs.outpth)
 
 FASTA_file = inputs.inputs
 MTDP_path = inputs.db

@@ -13,6 +13,8 @@ from sklearn.metrics import classification_report, balanced_accuracy_score, f1_s
 import torch.utils.data as Data
 from sklearn.model_selection import KFold
 import argparse
+import os
+
 parser = argparse.ArgumentParser(description="""Main script of PhaSUIT.""")
 parser.add_argument('--id', help='layer',  type=int, default = 6)
 inputs = parser.parse_args()
@@ -26,7 +28,11 @@ parser.add_argument('--label', type=int, default=6, help='path to the label.')
 parser.add_argument('--outpth', type=int, default=6, help='path to the output folder.')
 inputs = parser.parse_args()
 
-# meltome
+
+if not os.path.isdir(inputs.outpth):
+    os.makedirs(inputs.outpth)
+
+
 embed = pkl.load(open(f'{inputs.feat}', 'rb'))
 label = pkl.load(open(f'{inputs.label}', 'rb'))
 
