@@ -70,9 +70,6 @@ tokenizer = T5Tokenizer.from_pretrained('PATH_TO_MTDP/MTDP_tokenizer/', do_lower
 # Load the model
 model = T5EncoderModel.from_pretrained("PATH_TO_MTDP/UniProtKB/uniprotKB.bin").to(device)
 
-# only GPUs support half-precision currently; if you want to run on CPU use full-precision (not recommended, much slower)
-model.to(torch.float32) if device==torch.device("cpu")
-
 # prepare your protein sequences as a list
 sequence_examples = ["PRTEINO", "SEQWENCE"]
 
@@ -90,7 +87,7 @@ with torch.no_grad():
     input_ids = torch.Tensor(input_ids).long()
     mask = np.array([item.numpy() for item in batch_x['attention_mask']]).T
     mask = torch.Tensor(mask).long()
-    embedding_repr = model(input_ids=input_ids.cuda(), attention_mask=mask.cuda())
+    embedding_repr = model(input_ids=input_ids.to(device), attention_mask=mask.to(device))
 ```
 
 
