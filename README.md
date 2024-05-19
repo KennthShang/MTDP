@@ -90,7 +90,7 @@ with torch.no_grad():
     input_ids = torch.Tensor(input_ids).long()
     mask = np.array([item.numpy() for item in batch_x['attention_mask']]).T
     mask = torch.Tensor(mask).long()
-    embedding_repr = model(input_ids=input_ids.cuda(), attention_mask=mask.cuda())
+    embedding_repr = model(input_ids=input_ids.to(device), attention_mask=mask.to(device))
 ```
 
 
