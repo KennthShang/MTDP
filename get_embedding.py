@@ -65,10 +65,6 @@ except:
 
 model.to(device)
 
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
-
-
 
 with torch.no_grad():
     embed = []
@@ -81,7 +77,7 @@ with torch.no_grad():
         input_ids = torch.Tensor(input_ids).long()
         mask = np.array([item.numpy() for item in batch_x['attention_mask']]).T
         mask = torch.Tensor(mask).long()
-        embedding_repr = model(input_ids=input_ids.cuda(), attention_mask=mask.cuda())
+        embedding_repr = model(input_ids=input_ids.to(device), attention_mask=mask.to(device))
         embed.append(embedding_repr['logits'].detach().cpu().numpy())
         pbar.set_description(f'Processing {step}')
 
