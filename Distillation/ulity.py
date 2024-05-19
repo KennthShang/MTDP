@@ -3,6 +3,7 @@ from transformers import T5Tokenizer
 from Bio import SeqIO
 import pickle as pkl
 from datasets import Dataset
+import re
 
 
 def create_dataset(MTDP_path, FASTA_file, outpth, teacher1, teacher2):
