@@ -58,7 +58,7 @@ train_data = Dataset.from_dict(ids)
 model = MTDP()
 try:
     model.load_state_dict(
-        torch.load(f'{MTDP_path}/models/UniProtKB/uniprotKB.bin', map_location='cpu'))
+        torch.load(f'{MTDP_path}/models/UniProtKB/UniProtKB.bin', map_location='cpu'))
 except:
     print('No model found, initialize a new model')
     exit()
