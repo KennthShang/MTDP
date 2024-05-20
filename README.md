@@ -61,6 +61,9 @@ Example for how to derive embeddings from our MTDP model (UniProtKB version):
 from transformers import T5Tokenizer, T5EncoderModel
 import torch
 import re
+import numpy as np
+from embedder import MTDP
+from datasets import Dataset
 
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
@@ -68,7 +71,9 @@ device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 tokenizer = T5Tokenizer.from_pretrained('PATH_TO_MTDP/MTDP_tokenizer/', do_lower_case=False)
 
 # Load the model
-model = T5EncoderModel.from_pretrained("PATH_TO_MTDP/UniProtKB/uniprotKB.bin").to(device)
+model = MTDP()
+model.load_state_dict(torch.load(f'models/UniProtKB/UniProtKB.bin', map_location=device))
+
 
 # prepare your protein sequences as a list
 sequence_examples = ["PRTEINO", "SEQWENCE"]
@@ -83,15 +88,16 @@ data = Dataset.from_dict(ids)
 
 # generate embeddings
 with torch.no_grad():
-    input_ids = np.array([item.numpy() for item in data['input_ids']]).T
+    input_ids = np.array([np.array(item) for item in data['input_ids']])
     input_ids = torch.Tensor(input_ids).long()
-    mask = np.array([item.numpy() for item in batch_x['attention_mask']]).T
+    mask = np.array([np.array(item) for item in data['attention_mask']])
     mask = torch.Tensor(mask).long()
     embedding_repr = model(input_ids=input_ids.to(device), attention_mask=mask.to(device))
+
+final_embed = embedding_repr['logits'].detach().cpu().numpy() # shape: (2, 1280) 2 sequences, each has 1280-dimensional feature
 ```
 
-
-We also have a [script](https://github.com/KennthShang/MTDP/get_embedding.py) which simplifies deriving the embeddings from MTDP for a given FASTA file:
+This example code can only run in MTDP folder. We also have a [script](https://github.com/KennthShang/MTDP/get_embedding.py) which simplifies deriving the embeddings from MTDP for a given FASTA file in any path:
 ```
 python get_embedding.py --inputs some.fasta --db path_to_MTDP_folder --outpth pth_to_output_folder
 ```
