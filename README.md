@@ -33,7 +33,7 @@ Table of Contents
 
 <a name="news"></a>
 ## &nbsp; News
-
+Currently, the provided model and the paper are based on the UniProtKB database, which is a small subset of the UniRef50 dataset widely used for training large models like ESM2-33 and ProtT5-XL-UniRef50. To address this limitation, we are training the UniRef50 and UniRef100 versions of MTDP. It is estimated that the training procedure of the UniRef50 version will last weeks. We will update this folder once it is finished.
 
 <a name="install"></a>
 ## &nbsp; Installation
