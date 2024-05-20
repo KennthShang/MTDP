@@ -68,7 +68,7 @@ from datasets import Dataset
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
 # Load the tokenizer
-tokenizer = T5Tokenizer.from_pretrained('PATH_TO_MTDP/MTDP_tokenizer/', do_lower_case=False)
+tokenizer = T5Tokenizer.from_pretrained('MTDP_tokenizer/', do_lower_case=False)
 
 # Load the model
 model = MTDP()
