@@ -94,7 +94,7 @@ with torch.no_grad():
     mask = torch.Tensor(mask).long()
     embedding_repr = model(input_ids=input_ids.to(device), attention_mask=mask.to(device))
 
-final_embed = embedding_repr['logits'].detach().cpu().numpy() # shape: (2, 1280) 2 sequences, each has 1280-dimensional feature
+final_embed = embedding_repr['logits'].detach().cpu().numpy() # shape: (2, 1280) 2 sequences, each has a 1280-dimensional feature
 ```
 
 This example code can only run in MTDP folder. We also have a [script](https://github.com/KennthShang/MTDP/get_embedding.py) which simplifies deriving the embeddings from MTDP for a given FASTA file in any path:
