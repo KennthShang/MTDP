@@ -88,10 +88,8 @@ data = Dataset.from_dict(ids)
 
 # generate embeddings
 with torch.no_grad():
-    input_ids = np.array([np.array(item) for item in data['input_ids']])
-    input_ids = torch.Tensor(input_ids).long()
-    mask = np.array([np.array(item) for item in data['attention_mask']])
-    mask = torch.Tensor(mask).long()
+    input_ids = torch.Tensor(data['input_ids']).long()
+    mask = torch.Tensor(data['attention_mask']).long()
     embedding_repr = model(input_ids=input_ids.to(device), attention_mask=mask.to(device))
 
 final_embed = embedding_repr['logits'].detach().cpu().numpy() # shape: (2, 1280) 2 sequences, each has a 1280-dimensional feature
