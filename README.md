@@ -164,7 +164,14 @@ The MTDP models are released under the under terms of the [Academic Free License
 
 <a name="citation"></a>
 ## &nbsp; Citation
-If you use this code or our MTDP models for your publication, please cite the original paper:
+If you use this code or our MTDP models for your publication, please cite the original paper （currently, only arxiv version is available):
 ```
-
+@misc{shang2024accurate,
+      title={Accurate and efficient protein embedding using multi-teacher distillation learning}, 
+      author={Jiayu Shang and Cheng Peng and Yongxin Ji and Jiaojiao Guan and Dehan Cai and Xubo Tang and Yanni Sun},
+      year={2024},
+      eprint={2405.11735},
+      archivePrefix={arXiv},
+      primaryClass={q-bio.GN}
+}
 ```
