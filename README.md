@@ -41,7 +41,7 @@ All our models are available via this folder or huggingface:
 
 To install the packages easily, we provide a yaml file for conda installation.
 ```console
-conda env create -f environment.yml
+conda env create -f distillation.yaml
 ```
 
 Then, before using MTDP, please run
